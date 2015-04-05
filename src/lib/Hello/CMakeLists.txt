@@ -1,4 +1,4 @@
-project(SDLTest CXX)
+project(SDLTest CXX C)
 
 set(Hello_SRCS
   hello.cpp

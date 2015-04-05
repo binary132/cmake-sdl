@@ -1,4 +1,4 @@
-project(SDLTest CXX)
+project(SDLTest CXX C)
 
 add_subdirectory(
   Hello

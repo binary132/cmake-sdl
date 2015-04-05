@@ -1,4 +1,4 @@
-project(SDLTest CXX)
+project(SDLTest CXX C)
 
 cmake_minimum_required(VERSION 2.8.12)
 

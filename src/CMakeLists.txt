@@ -1,4 +1,4 @@
-project(SDLTest CXX)
+project(SDLTest CXX C)
 
 add_subdirectory(lib)
 
@@ -10,12 +10,17 @@ add_executable(${APPLICATION_NAME} ${main_SRCS})
 
 target_link_libraries(${APPLICATION_NAME} Hello)
 
-# find_package(SDL2 REQUIRED)
+find_package(SDL2 REQUIRED)
 
-include(FindPkgConfig)
+## using FindPkgConfig which doesn't work on Windows!(?)
+#
+# include(FindPkgConfig)
 
-PKG_SEARCH_MODULE(SDL2 REQUIRED sdl2)
-PKG_SEARCH_MODULE(SDL2IMAGE REQUIRED SDL2_image>=2.0.0)
+# pkg_search_module(SDL2 REQUIRED sdl2)
+# pkg_search_module(SDL2IMAGE REQUIRED SDL2_image>=2.0.0)
 
-INCLUDE_DIRECTORIES(${SDL2_INCLUDE_DIRS} ${SDL2IMAGE_INCLUDE_DIRS})
-TARGET_LINK_LIBRARIES(${APPLICATION_NAME} ${SDL2_LIBRARIES} ${SDL2IMAGE_LIBRARIES})
+# include_directories(${SDL2_INCLUDE_DIRS} ${SDL2IMAGE_INCLUDE_DIRS})
+# target_link_libraries(${APPLICATION_NAME} ${SDL2_LIBRARIES} ${SDL2IMAGE_LIBRARIES})
+
+include_directories(${SDL2_INCLUDE_DIRS}) # ${SDL2IMAGE_INCLUDE_DIRS})
+target_link_libraries(${APPLICATION_NAME} ${SDL2_LIBRARIES}) # ${SDL2IMAGE_LIBRARIES})
