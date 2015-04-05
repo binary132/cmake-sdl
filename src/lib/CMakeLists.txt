@@ -1,5 +1,5 @@
-# project(SDLTest CXX)
+project(SDLTest CXX)
 
-include_directories(
+add_subdirectory(
   Hello
 )

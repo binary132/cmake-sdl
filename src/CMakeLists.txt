@@ -1,10 +1,21 @@
-# project(SDLTest CXX)
+project(SDLTest CXX)
 
-find_library(Hello_SHARED_LIB Hello ${SDLTest_LIB_DIRS})
+add_subdirectory(lib)
 
 set(main_SRCS
   main.cpp
 )
 
 add_executable(${APPLICATION_NAME} ${main_SRCS})
-target_link_libraries(${APPLICATION_NAME} ${Hello_SHARED_LIB})
+
+target_link_libraries(${APPLICATION_NAME} Hello)
+
+# find_package(SDL2 REQUIRED)
+
+include(FindPkgConfig)
+
+PKG_SEARCH_MODULE(SDL2 REQUIRED sdl2)
+PKG_SEARCH_MODULE(SDL2IMAGE REQUIRED SDL2_image>=2.0.0)
+
+INCLUDE_DIRECTORIES(${SDL2_INCLUDE_DIRS} ${SDL2IMAGE_INCLUDE_DIRS})
+TARGET_LINK_LIBRARIES(${APPLICATION_NAME} ${SDL2_LIBRARIES} ${SDL2IMAGE_LIBRARIES})
