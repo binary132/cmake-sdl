@@ -4,6 +4,7 @@ CMakeFiles/
 build/*
 !build/.gitkeep
 lib/
+!src/lib
 target/
 
 *.so
