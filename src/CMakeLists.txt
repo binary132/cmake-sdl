@@ -22,5 +22,5 @@ find_package(SDL2 REQUIRED)
 # include_directories(${SDL2_INCLUDE_DIRS} ${SDL2IMAGE_INCLUDE_DIRS})
 # target_link_libraries(${APPLICATION_NAME} ${SDL2_LIBRARIES} ${SDL2IMAGE_LIBRARIES})
 
-include_directories(${SDL2_INCLUDE_DIRS}) # ${SDL2IMAGE_INCLUDE_DIRS})
-target_link_libraries(${APPLICATION_NAME} ${SDL2_LIBRARIES}) # ${SDL2IMAGE_LIBRARIES})
+include_directories(${SDL2_INCLUDE_DIR}) # ${SDL2IMAGE_INCLUDE_DIR})
+target_link_libraries(${APPLICATION_NAME} ${SDL2_LIBRARY}) # ${SDL2IMAGE_LIBRARIES})
