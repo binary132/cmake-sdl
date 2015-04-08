@@ -6,18 +6,18 @@ A simple CMake SDL test project
 
 # What you need
 
- - (CMake 2.8.12)[www.cmake.org/download] or greater
+ - [CMake 2.8.12](www.cmake.org/download) or greater
  - A C++11 toolchain:
    - [Microsoft Visual Studio Community](https://www.visualstudio.com/products/visual-studio-community-vs) is free.
    - [XCode](https://developer.apple.com/xcode/downloads/)
    - GCC / GNU Make \[Configuration depends on OS\]
-   - (optionally [Ninja](https://github.com/martine/ninja/releases) for faster builds)
+   - Optionally [Ninja](https://github.com/martine/ninja/releases) for faster builds
    - [Eclipse CDT](https://eclipse.org/cdt/)
    - [Codeblocks](http://www.codeblocks.org/downloads/26)
    - etc.
  - [LibSDL2](https://www.libsdl.org/download-2.0.php) "Development Libraries"
    - If you're on Windows, [set an SDL2LIB environment variable](http://www.computerhope.com/issues/ch000549.htm) to the path of your SDL2 installation.
-   - If you're on Mac OS X, [use Homebrew.](http://brew.sh/).  `brew install sdl2`
+   - If you're on Mac OS X, [use Homebrew](http://brew.sh/).  `brew install sdl2`
    - GNU/Linux should be straightforward.
  
 # Setting up your build
@@ -25,6 +25,8 @@ A simple CMake SDL test project
 CMake is a Makefile generator.  That means a single CMake configuration can be used to build and deploy software for any toolchain which supports it, e.g. GNU Make, Visual Studio, XCode, etc.
 
 What this means for us is that we need to run CMake first to generate our build, and then run the build using our native toolchain.
+
+> List available toolchains:
 
 ```bash
 cmake --help
@@ -49,6 +51,7 @@ The following generators are available on this platform:
 Use your generator:
 
  > Note: for Windows `NMake Makefiles`, you'll need to be in the [Developer command prompt](https://msdn.microsoft.com/en-us/library/ms229859(v=vs.110).aspx).
+ 
 ```bash
 git clone https://github.com/binary132/cmake-sdl.git
 cd cmake-sdl
