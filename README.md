@@ -8,7 +8,7 @@ A simple CMake SDL test project
 
  - [CMake 2.8.12](www.cmake.org/download) or greater
  - A C++11 toolchain:
-   - [Microsoft Visual Studio Community](https://www.visualstudio.com/products/visual-studio-community-vs) is free.
+   - [Microsoft Visual Studio Community Edition](https://www.visualstudio.com/products/visual-studio-community-vs) is a gratis option for Windows.
    - [XCode](https://developer.apple.com/xcode/downloads/)
    - GCC / GNU Make \[Configuration depends on OS\]
    - Optionally [Ninja](https://github.com/martine/ninja/releases) for faster builds
@@ -57,7 +57,7 @@ git clone https://github.com/binary132/cmake-sdl.git
 cd cmake-sdl
 cd build
 cmake -G "Ninja" .. # Or -G "NMake Makefiles" on Windows
-ninja
+ninja # or nmake, or make, or open project file in XCode, etc.
 ```
 
 The result should be a successful build, with an executable in `<project root>/build/target` named `SDLTest`.

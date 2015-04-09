@@ -2,6 +2,9 @@ project(SDLTest CXX C)
 
 cmake_minimum_required(VERSION 2.8.12)
 
+# This may cause issues on Windows.....
+add_definitions("-std=c++11")
+
 # global variables
 set(SDLTest_INCLUDE_DIR
   ${CMAKE_SOURCE_DIR}/include
