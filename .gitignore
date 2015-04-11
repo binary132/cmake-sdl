@@ -20,3 +20,5 @@ target/
 *.vcxproj.filters
 Debug/
 obj/
+*.psess
+*.vspx
