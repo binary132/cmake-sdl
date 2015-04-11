@@ -17,7 +17,6 @@ int main(int argc, char** argv)
           return 1;
      }
 
-     // Fire off the main thread for a
      a.mainLoop();
 
      std::cout << "Finished";

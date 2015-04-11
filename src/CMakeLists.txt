@@ -6,7 +6,7 @@ set(main_SRCS
   main.cxx
 )
 
-add_executable(${APPLICATION_NAME} ${main_SRCS})
+add_executable(${APPLICATION_NAME} ${GUI_TYPE} ${main_SRCS})
 
 target_link_libraries(${APPLICATION_NAME}
   App
