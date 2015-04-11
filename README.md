@@ -18,8 +18,8 @@ A simple CMake SDL test project
  - [LibSDL2](https://www.libsdl.org/download-2.0.php) "Development Libraries"
    - If you're on Windows, [set an SDL2LIB environment variable](http://www.computerhope.com/issues/ch000549.htm) to the path of your SDL2 installation.
    - If you're on Mac OS X, [use Homebrew](http://brew.sh/).  `brew install sdl2`
-   - GNU/Linux should be straightforward.
- 
+   - GNU/Linux should be straightforward, e.g. `apt-get install libsdl2`
+
 # Setting up your build
 
 CMake is a Makefile generator.  That means a single CMake configuration can be used to build and deploy software for any toolchain which supports it, e.g. GNU Make, Visual Studio, XCode, etc.
@@ -50,8 +50,8 @@ The following generators are available on this platform:
 
 Use your generator:
 
- > Note: for Windows `NMake Makefiles`, you'll need to be in the [Developer command prompt](https://msdn.microsoft.com/en-us/library/ms229859(v=vs.110).aspx).
- 
+ > Note: for Windows `NMake Makefiles` and `Ninja`, you'll need to be in the [Developer command prompt](https://msdn.microsoft.com/en-us/library/ms229859(v=vs.110).aspx).
+
 ```bash
 git clone https://github.com/binary132/cmake-sdl.git
 cd cmake-sdl
