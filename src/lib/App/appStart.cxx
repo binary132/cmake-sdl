@@ -58,6 +58,6 @@ void App::mainLoop()
           SDL_RenderCopy(renderer, texture, NULL, NULL);
           SDL_RenderPresent(renderer);
 
-          std::this_thread::sleep_until(frameEnd);
+          //std::this_thread::sleep_until(frameEnd);
      }
 }
