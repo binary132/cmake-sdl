@@ -18,6 +18,7 @@ namespace app {
      private:
           std::string title;
 
+          SDL_DisplayMode display;
           SDL_Window* window;
           SDL_Renderer* renderer;
           SDL_Texture* texture;

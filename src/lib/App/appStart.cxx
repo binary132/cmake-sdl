@@ -15,7 +15,7 @@ void App::mainLoop()
      SDL_Event event = SDL_Event{ 0 };
 
      while (!finished) {
-          SDL_UpdateTexture(texture, NULL, pixels, 640 * sizeof(Uint32));
+          SDL_UpdateTexture(texture, NULL, pixels, display.w * sizeof(Uint32));
 
           while (SDL_PollEvent(&event)) {
                switch(event.type) {
@@ -41,7 +41,7 @@ void App::mainLoop()
                     {
                          int mouseX = event.motion.x;
                          int mouseY = event.motion.y;
-                         pixels[mouseY * 640 + mouseX] = 0;
+                         pixels[mouseY * display.w + mouseX] = 0;
                     }
                     break;
                }
