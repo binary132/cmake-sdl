@@ -12,6 +12,10 @@ App::App(std::string titleIn) :
 
 App::~App()
 {
+     delete[] pixels;
+     SDL_DestroyTexture(texture);
+     SDL_DestroyRenderer(renderer);
      SDL_DestroyWindow(window);
+
      SDL_Quit();
 }

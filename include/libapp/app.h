@@ -19,6 +19,9 @@ namespace app {
           std::string title;
 
           SDL_Window* window;
+          SDL_Renderer* renderer;
+          SDL_Texture* texture;
+          Uint32* pixels;
      };
 }
 

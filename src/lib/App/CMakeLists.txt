@@ -20,3 +20,6 @@ target_link_libraries(App
   ${SDL2_LIBRARY}
   Error
 )
+
+set_property(TARGET App PROPERTY CXX_STANDARD 11)
+set_property(TARGET App PROPERTY CXX_STANDARD_REQUIRED ON)
