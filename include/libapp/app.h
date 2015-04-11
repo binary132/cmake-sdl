@@ -1,13 +1,24 @@
 #ifndef APP_H
 #define APP_H
 
+#include "SDL.h"
+
 #include "initError.h"
 
 namespace app {
      class App {
      public:
-          App() throw (error::InitError);
+          App(std::string title = "SDL-App");
           ~App();
+
+          void init() throw (error::InitError);
+
+          void mainLoop();
+
+     private:
+          std::string title;
+
+          SDL_Window* window;
      };
 }
 
