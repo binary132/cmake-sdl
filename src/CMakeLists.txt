@@ -13,10 +13,5 @@ target_link_libraries(${APPLICATION_NAME}
   Error
 )
 
-# find_package(SDL2 REQUIRED)
-
-# include_directories(${SDL2_INCLUDE_DIR}) # ${SDL2IMAGE_INCLUDE_DIR})
-# target_link_libraries(${APPLICATION_NAME} ${SDL2_LIBRARY}) # ${SDL2IMAGE_LIBRARIES})
-
-# target_compile_features(${APPLICATION_NAME} PRIVATE cxx_range_for)
-# add_definitions("-std=c++11")
+set_property(TARGET ${APPLICATION_NAME} PROPERTY CXX_STANDARD 11)
+set_property(TARGET ${APPLICATION_NAME} PROPERTY CXX_STANDARD_REQUIRED ON)

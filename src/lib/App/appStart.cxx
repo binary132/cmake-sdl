@@ -9,12 +9,13 @@ using namespace app;
 
 void App::mainLoop()
 {
+     int i = 0;
      bool finished = false;
      SDL_Event event = SDL_Event({ 0 });
 
      std::chrono::system_clock::time_point now, frameEnd;
      std::chrono::microseconds frameTime =
-          std::chrono::microseconds((long)(1000000.0d/60.0d));
+          std::chrono::microseconds((long)(1000000.0/60.0));
 
      while (!finished) {
           now = std::chrono::system_clock::now();

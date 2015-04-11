@@ -1,9 +1,6 @@
 project(SDLTest CXX C)
 
-cmake_minimum_required(VERSION 2.8.12)
-
-# This may cause issues on Windows.....
-add_definitions("-std=c++11")
+cmake_minimum_required(VERSION 3.1.0 FATAL_ERROR)
 
 # global variables
 set(SDLTest_INCLUDE_DIR
@@ -26,8 +23,7 @@ set(APPLICATION_VERSION_PATCH "1")
 
 set(APPLICATION_VERSION	"${APPLICATION_VERSION_MAJOR}.${APPLICATION_VERSION_MINOR}.${APPLICATION_VERSION_PATCH}")
 
-# where to look first for cmake modules, before ${CMAKE_ROOT}/Modules/ isinc
-# checked
+# where to look first for cmake modules, before ${CMAKE_ROOT}/Modules/ is checked
 set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/Modules)
 
 # disallow in-source build
@@ -39,12 +35,4 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${SDLTest_TARGET_DIR})
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${SDLTest_LIB_DIR})
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${SDLTest_LIB_DIR})
 
-# find_package(SDL2 2.0.3)
-# if(SDL2_FOUND)
-#  target_include_directories(SDLUse PRIVATE ${SDL2_INCLUDE_DIRS})
-#  target_link_libraries(SDLUse LINK_PRIVATE ${SDL2_LIBRARIES})
-# endif()
-
-# include_directories(${SDLTest_INCLUDE_DIR})
-# add_subdirectory(${SDLTest_INCLUDE_DIR})
 add_subdirectory(src)

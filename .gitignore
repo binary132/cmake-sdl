@@ -7,5 +7,15 @@ lib/
 !src/lib
 target/
 
+*.sw[nop]
+
 *.so
 *.a
+
+*.opensdf
+*.sdf
+*.sln
+*.suo
+*.vcxproj
+*.vcxproj.filters
+Debug/

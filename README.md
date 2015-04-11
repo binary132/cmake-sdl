@@ -8,7 +8,7 @@ A simple CMake SDL test project
 
  - [CMake 2.8.12](www.cmake.org/download) or greater
  - A C++11 toolchain:
-   - [Microsoft Visual Studio Community Edition](https://www.visualstudio.com/products/visual-studio-community-vs) is a gratis option for Windows.
+   - [Microsoft Visual Studio Community Edition](https://www.visualstudio.com/products/visual-studio-community-vs) is a gratis option for Windows.  (2013+)
    - [XCode](https://developer.apple.com/xcode/downloads/)
    - GCC / GNU Make \[Configuration depends on OS\]
    - Optionally [Ninja](https://github.com/martine/ninja/releases) for faster builds
