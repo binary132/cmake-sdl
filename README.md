@@ -15,10 +15,10 @@ A simple CMake SDL test project
    - [Eclipse CDT](https://eclipse.org/cdt/)
    - [Codeblocks](http://www.codeblocks.org/downloads/26)
    - etc.
- - [LibSDL2](https://www.libsdl.org/download-2.0.php) "Development Libraries"
+ - [LibSDL2](https://www.libsdl.org/download-2.0.php) Development Libraries
    - If you're on Windows, [set an SDL2LIB environment variable](http://www.computerhope.com/issues/ch000549.htm) to the path of your SDL2 installation.
    - If you're on Mac OS X, [use Homebrew](http://brew.sh/).  `brew install sdl2`
-   - GNU/Linux should be straightforward, e.g. `apt-get install libsdl2`
+   - GNU/Linux should be straightforward, e.g. `apt-get install libsdl2-dev`
 
 # Setting up your build
 
