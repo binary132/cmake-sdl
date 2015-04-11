@@ -19,3 +19,4 @@ target/
 *.vcxproj
 *.vcxproj.filters
 Debug/
+obj/
