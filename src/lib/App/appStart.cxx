@@ -57,7 +57,6 @@ void App::mainLoop()
                          for( int i = 0; i * i < d2; i++ ) {
                               pixels[(prevY + (int)(i*stepY)) * display.w + (prevX + (int)((i * stepX)))] = 0;
                          }
-                         prevX = currX, prevY = currY;
                     }
                     break;
                }
