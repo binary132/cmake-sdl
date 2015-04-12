@@ -1,4 +1,5 @@
 #include <chrono>
+#include <cmath>
 
 #include "SDL.h"
 
@@ -11,6 +12,10 @@ void App::mainLoop()
      int i = 0;
      bool finished = false;
      bool leftMouseButtonDown = false;
+     int prevX = 0, prevY = 0;
+     int currX = 0, currY = 0;
+     int dx = 0, dy = 0, d2 = 0;
+     float d = 0.0, stepX = 0.0, stepY = 0.0;
 
      SDL_Event event = SDL_Event{ 0 };
 
@@ -33,15 +38,26 @@ void App::mainLoop()
                          leftMouseButtonDown = false;
                     break;
                case SDL_MOUSEBUTTONDOWN:
-                    if (event.button.button == SDL_BUTTON_LEFT)
+                    if (event.button.button == SDL_BUTTON_LEFT) {
                          leftMouseButtonDown = true;
+                         prevX = currX = event.button.x, prevY = currY = event.button.y;
+                         pixels[currY * display.w + currX] = 0;
+                    }
                     break;
                case SDL_MOUSEMOTION:
                     if (leftMouseButtonDown)
                     {
-                         int mouseX = event.motion.x;
-                         int mouseY = event.motion.y;
-                         pixels[mouseY * display.w + mouseX] = 0;
+                         currX = event.motion.x, currY = event.motion.y;
+                         dx = currX - prevX;
+                         dy = currY - prevY;
+                         d2 = dx * dx + dy * dy;
+                         d = sqrt(d2);
+                         stepX = dx / d;
+                         stepY = dy / d;
+                         for( int i = 0; i * i < d2; i++ ) {
+                              pixels[(prevY + (int)(i*stepY)) * display.w + (prevX + (int)((i * stepX)))] = 0;
+                         }
+                         prevX = currX, prevY = currY;
                     }
                     break;
                }
